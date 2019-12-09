@@ -16,9 +16,11 @@ const winston = require('./config/winston');
 const app = express();
 
 app.use(cookieParser());
+ssa
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(morgan('combined', {stream: winston.stream}));
+
 
 // Passport
 app.use(passport.initialize());
