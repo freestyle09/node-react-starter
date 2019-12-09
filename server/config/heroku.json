@@ -1,0 +1,35 @@
+{
+  "server": {
+    "port": 8080
+  },
+  "mongo": {
+    "uri": {
+      "host": "it-talents-ursra.mongodb.net",
+      "resource": "test",
+      "query": "?retryWrites=true&w=majority",
+      "name": "mongodb+srv"
+    },
+    "credentials": {
+      "user": "damian0o",
+      "pass": "Y2PQaixxXtb89BN"
+    }
+  },
+  "facebook": {
+    "app_id": "643416933151445",
+    "app_secret": "00a475acfc6eddebf10321ac01a3c133",
+    "callback": "https://it-leaders.dev/api/candidates/login/facebook/callback"
+  },
+  "authentication": {
+    "token": {
+      "issuer": "https://it-leaders.dev",
+      "audience": "https://it-leaders.dev",
+      "secret": "asaASDlklqmlkqnd12@!2"
+    }
+  },
+  "uploader": {
+    "destPath": "./uploads"
+  },
+  "statsd": {
+    "mock": true
+  }
+}

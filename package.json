@@ -1,0 +1,47 @@
+{
+  "name": "node-react-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run start --prefix client",
+    "test": "mocha",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dc:up": "docker-compose -f docker/devenv.yml up -d",
+    "dc:up-persist": "docker-compose -f docker/devenv.yml -f docker/dev$nv.persist.yml up -d",
+    "dc:dn": "docker-compose -f docker/devenv.yml down",
+    "dc:ps": "docker-compose -f docker/devenv.yml ps",
+    "dc:build-client": "npm run dc:build --prefix client",
+    "dc:push-client": "npm run dc:push --prefix client",
+    "dc:build-server": "npm run dc:build --prefix server",
+    "dc:push-server": "npm run dc:push --prefix server",
+    "dc:push": "npm run dc:build-client && npm run dc:push-client && npm run dc:build-server && npm run dc:push-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freestyle09/node-react-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freestyle09/node-react-starter/issues"
+  },
+  "homepage": "https://github.com/freestyle09/node-react-starter#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.1",
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "mongoose": "^5.6.11",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "node-statsd": "^0.1.1",
+    "nodemon": "^1.19.1",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
+  }
+}

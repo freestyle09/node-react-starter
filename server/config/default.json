@@ -1,0 +1,38 @@
+{
+  "server": {
+    "port": 5000
+  },
+  "mongo": {
+    "uri": {
+      "host": "localhost",
+      "resource": "admin",
+      "query": "",
+      "name": "mongodb"
+    },
+    "credentials": {
+      "user": "root",
+      "pass": "example"
+    }
+  },
+  "facebook": {
+    "app_id": "643416933151445",
+    "app_secret": "00a475acfc6eddebf10321ac01a3c133",
+    "callback": "http://localhost:5000/api/candidates/login/facebook/callback"
+  },
+  "authentication": {
+    "token": {
+      "issuer": "https://it-leaders.dev",
+      "audience": "https://it-leaders.dev",
+      "secret": "asaASDlklqmlkqnd12@!2"
+    }
+  },
+  "uploader": {
+    "destPath": "./uploads"
+  },
+  "statsd": {
+    "mock": true
+  },
+  "frontend": {
+    "offerUrl": "http://localhost:3006/offers/1234"
+  }
+}
